@@ -18,19 +18,15 @@ namespace gruppprojekt2
                 } else if (buttonPressed == 2) // Exits menu and enters option 2
                   {
                     showMenu = false;
-                  }
                 } else if (buttonPressed == 3) // Option 3
                   {
 
-                  }
                 } else if (buttonPressed == 4) // Shows the creator lulz
                   {
                     Console.WriteLine("\n\nMade by Auan Jiawook, Hilda Behnam and Manne Johnsson");
-                  }
                 } else if (buttonPressed == 5) // Option 5
                   {
                     
-                  }
                 } else if (buttonPressed == 6) // Exits the program
                  {
                     Environment.Exit(0); // Exits the program instead of having to manually exit with "Control + C"
