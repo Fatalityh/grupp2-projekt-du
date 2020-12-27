@@ -5,10 +5,11 @@ namespace gruppprojekt2
 {
     class Program
     {
-        static void Main(string[] args) {            
-            bool menyVal = true;
-            int input;
-            while (menyVal)
+        static void Main(string[] args) {         
+               
+            bool menuChoice = true;
+
+            while (menuChoice)
             {
                 /* Menyn med alternativ för programmet */
                 Console.WriteLine("Hello! What do you want to do today?");
@@ -16,32 +17,19 @@ namespace gruppprojekt2
                 Console.WriteLine("2. Search older posts");
                 Console.WriteLine("3. Exit");
              
-                /* Vid fel input från användaren */
-                string stringInput;
-                stringInput = Console.ReadLine();
-                if (!int.TryParse(stringInput, out input))
-                {
-                    Console.WriteLine("Testa igen!");
-                    continue; // Om användaren skriver fel input mer än en gång, så kommer menyn upp igen //
-                }
-
-                /* Alternativ 1 till 5 i menyn */
                 switch (int.Parse(Console.ReadLine()))
                 {
-                    /* Multiplikationstabellen */
                     case 1:
-                        Tabeller();
+                        Console.WriteLine("Choice 1");
                         break;
 
-                    /* Summa och medelvärde på önskade tal */
                     case 2:
-                        Tal();
+                        Console.WriteLine("Choice 2");
                         break;
 
-          
-                    /* Avsluta programmet */
                     case 3:
-                        menyVal = false;
+                        Console.WriteLine("Choice 3");
+                        menuChoice = false;
                         break;
                 }
             }
