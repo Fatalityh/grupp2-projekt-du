@@ -5,7 +5,9 @@ namespace gruppprojekt2
 {
     class Program
     {
-        static void Main(string[] args) {         
+        static void Main(string[] args) {     
+            Posts postUser = new Posts(); // Creates an instance of Posts    
+            //AddToFile PostsToFile = new AddToFile();
 
             bool menuChoice = true;
 
@@ -20,11 +22,11 @@ namespace gruppprojekt2
                 switch (buttonPressed)
                 {
                     case 1:
-                        Console.WriteLine("Choice 1");
+                        Posts.AddPostData();
                         break;
 
                     case 2:
-                        Console.WriteLine("Choice 2");
+                        OutputData.OutputPersonData();
                         break;
 
                     case 3:
