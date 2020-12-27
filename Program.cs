@@ -14,9 +14,10 @@ namespace gruppprojekt2
                 Console.WriteLine("Hello! What do you want to do today?");
                 Console.WriteLine("1. Create a new post");
                 Console.WriteLine("2. Search older posts");
-                Console.WriteLine("3. Exit");
-             
-                switch (int.Parse(Console.ReadLine()))
+                Console.WriteLine("3. Exit");             
+                int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
+
+                switch (buttonPressed)
                 {
                     case 1:
                         Console.WriteLine("Choice 1");
