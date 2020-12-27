@@ -5,8 +5,7 @@ namespace gruppprojekt2
 {
     class Program
     {
-        static void Main(string[] args) {
-            
+        static void Main(string[] args) {            
             bool menyVal = true;
             int input;
             while (menyVal)
@@ -46,8 +45,6 @@ namespace gruppprojekt2
                         break;
                 }
             }
-        }
-            
         }
     }
 }
