@@ -6,12 +6,11 @@ namespace gruppprojekt2
     class Program
     {
         static void Main(string[] args) {         
-               
+
             bool menuChoice = true;
 
             while (menuChoice)
             {
-                /* Menyn med alternativ för programmet */
                 Console.WriteLine("Hello! What do you want to do today?");
                 Console.WriteLine("1. Create a new post");
                 Console.WriteLine("2. Search older posts");
