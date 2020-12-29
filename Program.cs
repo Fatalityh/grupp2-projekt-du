@@ -6,8 +6,9 @@ namespace gruppprojekt2
     class Program
     {
         static void Main(string[] args) {     
-            Posts postUser = new Posts(); // Creates an instance of Posts    
-            //AddToFile PostsToFile = new AddToFile();
+            OutputData outputData = new OutputData(); // Creates an instance of AddToFile
+            PostsClass postsInfo = new PostsClass(); // Creates an instance of AddToFile
+
 
             bool menuChoice = true;
 
@@ -22,11 +23,11 @@ namespace gruppprojekt2
                 switch (buttonPressed)
                 {
                     case 1:
-                        Posts.AddPostData();
+                        postsInfo.AddPostData();
                         break;
 
                     case 2:
-                        OutputData.OutputPersonData();
+                        postsInfo.OutputPersonData();
                         break;
 
                     case 3:
