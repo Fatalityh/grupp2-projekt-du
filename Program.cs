@@ -27,7 +27,7 @@ namespace gruppprojekt2
                         break;
 
                     case 2:
-                        postsInfo.OutputPersonData();
+                        outputData.OutputPersonData();
                         break;
 
                     case 3:

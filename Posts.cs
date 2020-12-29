@@ -21,7 +21,7 @@ namespace gruppprojekt2 {
             string savedPost = Console.ReadLine();
             Console.WriteLine($"{savedPost} added to {savedPosterName}");
 
-            Console.WriteLine($"{savedPost} added to {savedPosterName}, you are now done adding this person to the list. \nReturning to Main Menu."); // End of adding details
+            Console.WriteLine($"{savedPost} added to {savedPosterName}, you are now done adding this post. \nReturning to Main Menu."); // End of adding details
 
 
             // Adds all the data into the postUser variable
@@ -31,8 +31,12 @@ namespace gruppprojekt2 {
             Posts.Add(postsUser); // Adds the data above (postUser - variable) into the list persons
         }
 
-        public void OutputPersonData() {
+        /*public void OutputPersonData() {
             Posts.ForEach(Console.WriteLine);
+        }*/
+
+        public List<PostsInfo> GetList() {
+            return Posts;
         }
     }
 
