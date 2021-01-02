@@ -5,7 +5,10 @@ namespace gruppprojekt2
 {
     class Program
     {
-        static void Main(string[] args) {         
+        static void Main(string[] args) {     
+            OutputData outputData = new OutputData(); // Creates an instance of AddToFile
+            PostsClass postsInfo = new PostsClass(); // Creates an instance of AddToFile
+
 
             bool menuChoice = true;
 
@@ -14,16 +17,17 @@ namespace gruppprojekt2
                 Console.WriteLine("Hello! What do you want to do today?");
                 Console.WriteLine("1. Create a new post");
                 Console.WriteLine("2. Search older posts");
-                Console.WriteLine("3. Exit");
-             
-                switch (int.Parse(Console.ReadLine()))
+                Console.WriteLine("3. Exit");             
+                int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
+
+                switch (buttonPressed)
                 {
                     case 1:
-                        Console.WriteLine("Choice 1");
+                        postsInfo.AddPostData();
                         break;
 
                     case 2:
-                        Console.WriteLine("Choice 2");
+                        outputData.OutputPersonData();
                         break;
 
                     case 3:
