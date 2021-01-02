@@ -15,38 +15,48 @@ namespace gruppprojekt2 {
 
             Console.WriteLine("\nWrite the name of the person that is posting..."); // Name of the poster 
             string savedPosterName = Console.ReadLine();
-            Console.WriteLine($"{savedPosterName}");
 
-            Console.WriteLine($"Write your post {savedPosterName}?"); // Post
+            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?"); // Post
+            string savedPostTitle = Console.ReadLine();
+
+            Console.WriteLine($"\nWrite your post {savedPosterName}?"); // Post
             string savedPost = Console.ReadLine();
-            Console.WriteLine($"{savedPost} added to {savedPosterName}");
 
-            Console.WriteLine($"{savedPost} added to {savedPosterName}, you are now done adding this post. \nReturning to Main Menu."); // End of adding details
+            Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
 
 
             // Adds all the data into the postUser variable
+            postsUser.SetPostsDate(DateTime.Now);
             postsUser.SetPosterName(savedPosterName);
+            postsUser.SetPostTitle(savedPostTitle);
             postsUser.SetPostComment(savedPost);
 
             Posts.Add(postsUser); // Adds the data above (postUser - variable) into the list persons
         }
 
-        /*public void OutputPersonData() {
+        public void OutputPersonData() {
             Posts.ForEach(Console.WriteLine);
-        }*/
-
-        public List<PostsInfo> GetList() {
-            return Posts;
         }
     }
 
     class PostsInfo {
-        string posterName, posterComment;
+        string posterName, posterTitle, posterComment;
+        DateTime dateOfPost;
+        public void SetPostsDate(DateTime pDate) {
+            this.dateOfPost = pDate;
+        }
         public void SetPosterName(string pName) {
             this.posterName = pName;
         }
+        public void SetPostTitle(string pTitle) {
+            this.posterTitle = pTitle;
+        }
         public void SetPostComment(string pData) {
             this.posterComment = pData;
+        }
+
+        public override string ToString() { // Outputs everything in the "Show data of people" option in menu
+            return $"{dateOfPost}\n  {posterTitle}\n     {posterName}\n{posterComment}\n";
         }
     }
 }
