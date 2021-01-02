@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj": {}
+    "C:\\Users\\46722\\Documents\\GitHub\\grupp2-projekt-du\\grupp2-projekt-du.csproj": {}
   },
   "projects": {
-    "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj": {
+    "C:\\Users\\46722\\Documents\\GitHub\\grupp2-projekt-du\\grupp2-projekt-du.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
+        "projectUniqueName": "C:\\Users\\46722\\Documents\\GitHub\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
         "projectName": "grupp2-projekt-du",
-        "projectPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
-        "packagesPath": "C:\\Users\\auanj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\obj\\",
+        "projectPath": "C:\\Users\\46722\\Documents\\GitHub\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
+        "packagesPath": "C:\\Users\\46722\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\46722\\Documents\\GitHub\\grupp2-projekt-du\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\auanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\46722\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -37,8 +34,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -54,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
