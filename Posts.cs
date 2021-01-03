@@ -17,14 +17,11 @@ namespace gruppprojekt2 {
             string savedPosterName = Console.ReadLine();
             Console.WriteLine($"{savedPosterName}");
 
-<<<<<<< Updated upstream
-=======
             Console.WriteLine("\n Whats the title of the post?"); // Title of the Post
             string savedPostTitle = Console.ReadLine();
             Console.WriteLine($"{savedPostTitle}");
             
 
->>>>>>> Stashed changes
             Console.WriteLine($"Write your post {savedPosterName}?"); // Post
             string savedPost = Console.ReadLine();
             Console.WriteLine($"{savedPost} added to {savedPosterName}");
@@ -57,11 +54,8 @@ namespace gruppprojekt2 {
         public void SetPostComment(string pData) {
             this.posterComment = pData;
         }
-<<<<<<< Updated upstream
-=======
         public void SetPostTitle(string pTitle) {
             this.postTitle = pTitle;
         }
->>>>>>> Stashed changes
     }
 }
