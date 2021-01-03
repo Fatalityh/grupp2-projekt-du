@@ -37,6 +37,18 @@ namespace gruppprojekt2 {
         public void OutputPersonData() {
             Posts.ForEach(Console.WriteLine);
         }
+
+        public void OutputSearchParameter() {
+            Console.WriteLine("Search for a post");
+            string savedSearchParameter = Console.ReadLine();
+            if (Posts.Contains(savedSearchParameter))
+            {
+                Posts
+            }else
+            {
+                Console.WriteLine($"Invalid, could not find a post containing {savedSearchParameter}");
+            }
+        }
     }
 
     class PostsInfo {
