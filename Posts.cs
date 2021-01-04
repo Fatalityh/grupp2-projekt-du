@@ -26,49 +26,51 @@ namespace gruppprojekt2 {
 
 
             // Adds all the data into the postUser variable
-            postsUser.SetPostsDate(DateTime.Now);
-            postsUser.SetPosterName(savedPosterName);
-            postsUser.SetPostTitle(savedPostTitle);
-            postsUser.SetPostComment(savedPost);
+            postsUser.DateOfPost = DateTime.Now;
+            postsUser.PosterName = savedPosterName;
+            postsUser.PosterTitle = savedPostTitle;
+            postsUser.PosterComment = savedPost;
 
             Posts.Add(postsUser); // Adds the data above (postUser - variable) into the list persons
         }
 
         public void OutputPersonData() {
-            Posts.ForEach(Console.WriteLine);
+            bool miniMenu = true;
+
+            while (miniMenu == true) {
+                Console.WriteLine("Choose a sorting option, 1: Early to Late 2: Late to early");
+                int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
+
+                switch (buttonPressed) {
+                    case 1:
+                        Posts.Sort((x, y) => DateTime.Compare(x.DateOfPost, y.DateOfPost));
+                        Posts.ForEach(Console.WriteLine);
+                        miniMenu = false;
+                        break;
+
+                    case 2:
+                        Posts.Sort((y, x) => DateTime.Compare(x.DateOfPost, y.DateOfPost));
+                        Posts.ForEach(Console.WriteLine);
+                        miniMenu = false;
+                        break;
+                }
+            }
         }
 
         public void OutputSearchParameter() {
             Console.WriteLine("Search for a post");
             string savedSearchParameter = Console.ReadLine();
-            if (Posts.Contains(savedSearchParameter))
-            {
-                Posts
-            }else
-            {
+            bool foundMatch = false;
+
+            foreach (PostsInfo post in Posts) {
+                if (post.PosterName.Contains(savedSearchParameter)) {
+                    Console.WriteLine(post);
+                    foundMatch = true;
+                }
+            }
+            if (!foundMatch) {
                 Console.WriteLine($"Invalid, could not find a post containing {savedSearchParameter}");
             }
-        }
-    }
-
-    class PostsInfo {
-        string posterName, posterTitle, posterComment;
-        DateTime dateOfPost;
-        public void SetPostsDate(DateTime pDate) {
-            this.dateOfPost = pDate;
-        }
-        public void SetPosterName(string pName) {
-            this.posterName = pName;
-        }
-        public void SetPostTitle(string pTitle) {
-            this.posterTitle = pTitle;
-        }
-        public void SetPostComment(string pData) {
-            this.posterComment = pData;
-        }
-
-        public override string ToString() { // Outputs everything in the "Show data of people" option in menu
-            return $"{dateOfPost}\n  {posterTitle}\n     {posterName}\n{posterComment}\n";
         }
     }
 }

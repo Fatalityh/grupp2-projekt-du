@@ -6,7 +6,6 @@ namespace gruppprojekt2
     class Program
     {
         static void Main(string[] args) {     
-            OutputData outputData = new OutputData(); // Creates an instance of AddToFile
             PostsClass postsInfo = new PostsClass(); // Creates an instance of AddToFile
 
 
@@ -32,6 +31,7 @@ namespace gruppprojekt2
                         break;
 
                     case 3:
+                        postsInfo.OutputSearchParameter();
                         break;
 
                     case 4:
