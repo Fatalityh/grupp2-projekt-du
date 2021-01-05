@@ -1,0 +1,13 @@
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.exe
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.deps.json
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.runtimeconfig.json
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.runtimeconfig.dev.json
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.dll
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\bin\Debug\netcoreapp3.1\grupp2-projekt-du.pdb
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.csprojAssemblyReference.cache
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.AssemblyInfoInputs.cache
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.AssemblyInfo.cs
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.csproj.CoreCompileInputs.cache
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.dll
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.pdb
+C:\Users\46722\Documents\GitHub\grupp2-projekt-du\obj\Debug\netcoreapp3.1\grupp2-projekt-du.genruntimeconfig.cache
