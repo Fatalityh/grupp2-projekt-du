@@ -38,17 +38,19 @@ namespace gruppprojekt2 {
             bool miniMenu = true;
 
             while (miniMenu == true) {
-                Console.WriteLine("Choose a sorting option, 1: Early to Late 2: Late to early");
+                Console.WriteLine("\nChoose a sorting option, 1: Early to Late 2: Late to early");
                 int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
-
+                
                 switch (buttonPressed) {
                     case 1:
+                        Console.WriteLine("");
                         Posts.Sort((x, y) => DateTime.Compare(x.DateOfPost, y.DateOfPost));
                         Posts.ForEach(Console.WriteLine);
                         miniMenu = false;
                         break;
 
                     case 2:
+                        Console.WriteLine("");
                         Posts.Sort((y, x) => DateTime.Compare(x.DateOfPost, y.DateOfPost));
                         Posts.ForEach(Console.WriteLine);
                         miniMenu = false;
@@ -58,18 +60,18 @@ namespace gruppprojekt2 {
         }
 
         public void OutputSearchParameter() {
-            Console.WriteLine("Search for a post");
+            Console.WriteLine("\nSearch for a post:");
             string savedSearchParameter = Console.ReadLine();
             bool foundMatch = false;
-
+    
             foreach (PostsInfo post in Posts) {
-                if (post.PosterName.Contains(savedSearchParameter)) {
+                if (post.PosterName.Contains(savedSearchParameter) || post.PosterTitle.Contains(savedSearchParameter)) {
                     Console.WriteLine(post);
                     foundMatch = true;
                 }
             }
             if (!foundMatch) {
-                Console.WriteLine($"Invalid, could not find a post containing {savedSearchParameter}");
+                Console.WriteLine($"\nInvalid, could not find a post containing {savedSearchParameter}\n");
             }
         }
     }

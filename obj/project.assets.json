@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
+      "projectUniqueName": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
       "projectName": "grupp2-projekt-du",
-      "projectPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
+      "projectPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
       "packagesPath": "C:\\Users\\auanj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp-2-projekt\\grupp2-projekt-du\\obj\\",
+      "outputPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\auanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
