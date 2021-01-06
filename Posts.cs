@@ -6,18 +6,18 @@ using System.Text.Json;
 
 namespace gruppprojekt2 {
     class PostsClass {
-        List<PostsInfo> Posts = new List<PostsInfo>();
+        public List<PostsInfo> Posts = new List<PostsInfo>(); // Creates a list from PostsInfo class
 
         public void AddPostData() {
             PostsInfo postsUser = new PostsInfo(); // Creates an instance of PostsInfo
 
-            Console.WriteLine("\nWrite the name of the person that is posting...");  
+            Console.WriteLine("\nWrite the name of the person that is posting...");
             string savedPosterName = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?"); 
+            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?");
             string savedPostTitle = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite your post {savedPosterName}?"); 
+            Console.WriteLine($"\nWrite your post {savedPosterName}?");
             string savedPost = Console.ReadLine();
 
             Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
@@ -50,29 +50,23 @@ namespace gruppprojekt2 {
             return content;
         }
 
-        public void GetFileReadFromJson() { // Used to get the "ReadJsonFromFile" method because it's static. We need this so that we can implement it into the program's menu
-            ReadJsonFromFile(); // Just a callback to the method
-        }
-
-        static void ReadJsonFromFile() { // Method that is used to Deserialize from the file "PostsData.json" so that we can read the objects and use WriteLine to output each string and datetime
+        public List<PostsInfo> ReadJsonFromFile() { // Method that is used to Deserialize from the file "PostsData.json" so that we can read the objects and use WriteLine to output each string and datetime
             string path = "PostsData.json";
             string json = ReadPostData(path);
-            List<PostsInfo> posts = JsonSerializer.Deserialize<List<PostsInfo>>(json); // Deserializes the List<PostsInfo>
-            foreach (var post in posts) // For every Post, Writeline each string and Datetime
-            {
-                Console.WriteLine($"\n{post.DateOfPost}");
-                Console.WriteLine(post.PosterName);
-                Console.WriteLine(post.PosterTitle);
-                Console.WriteLine($"{post.PosterComment}\n");
-            }
+            List<PostsInfo> Posts = JsonSerializer.Deserialize<List<PostsInfo>>(json); // Deserializes the List<PostsInfo>
+            return Posts; // Return the serialized data from the list (Posts)
         }
 
-        public void OutputPersonData() { // Used so that we can sort the posts by early to late OR late to early by using a miniMenu
+        public void OutputPersonData() { // Used so that we can sort the Posts by early to late OR late to early by using a miniMenu
             bool miniMenu = true;
 
             while (miniMenu == true) {
                 Console.WriteLine("\nChoose a sorting option, 1: Early to Late 2: Late to early");
-                int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString()); // Just like the main menu, we make sure that it registers instantly by clicking on either 1 or 2
+
+                int buttonPressed;
+                while (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
+                    Console.WriteLine("\nIncorrect: Please choose a number between 1-2.");
+                }
 
                 switch (buttonPressed) {
                     case 1:
@@ -97,7 +91,7 @@ namespace gruppprojekt2 {
             string savedSearchParameter = Console.ReadLine();
             bool foundMatch = false;
 
-            foreach (PostsInfo post in Posts) { // Used to find each Post in the list Posts so that when we search it goes through all the posts until it finds a result from our input
+            foreach (PostsInfo post in Posts) { // Used to find each Post in the list Posts so that when we search it goes through all the Posts until it finds a result from our input
                 if (post.PosterName.Contains(savedSearchParameter) || post.PosterTitle.Contains(savedSearchParameter)) {
                     Console.WriteLine(post);
                     foundMatch = true;
