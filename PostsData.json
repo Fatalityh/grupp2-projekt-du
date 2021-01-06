@@ -1,0 +1,20 @@
+[
+    {
+        "PosterName": "Peter",
+        "PosterTitle": "Tj\u00E4rna \u00C4ngar",
+        "PosterComment": "Eyyy jag blev r\u00E5nad p\u00E5 20kr f\u00F6rfan!",
+        "DateOfPost": "2021-01-06T16:46:57.6151043+01:00"
+    },
+    {
+        "PosterName": "Harald",
+        "PosterTitle": "Ost",
+        "PosterComment": "Ost \u00E4r gott ohja",
+        "DateOfPost": "2021-01-06T16:47:08.6529823+01:00"
+    },
+    {
+        "PosterName": "Bengt",
+        "PosterTitle": "J\u00E4vla k\u00E4rring",
+        "PosterComment": "Jag blev fast i trafiken pga en j\u00E4vla k\u00E4rring!",
+        "DateOfPost": "2021-01-06T16:47:31.4491794+01:00"
+    }
+]
