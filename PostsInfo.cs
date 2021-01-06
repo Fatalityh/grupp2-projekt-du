@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace gruppprojekt2
 {
+    [Serializable] // Makes it so that everything in here is Serializable and able to become JSON data
     class PostsInfo {
         public string PosterName { get; set; }
         public string PosterTitle { get; set; }
