@@ -8,8 +8,7 @@ namespace gruppprojekt2
         static void Main(string[] args) {     
             PostsClass postsInfo = new PostsClass(); // Creates an instance of AddToFile
 
-
-            bool menuChoice = true;
+            bool menuChoice = true; 
 
             while (menuChoice)
             {
@@ -20,8 +19,11 @@ namespace gruppprojekt2
                 Console.WriteLine("4. Exit");             
                 int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
 
+               
+
                 switch (buttonPressed)
                 {
+
                     case 1:
                         postsInfo.AddPostData();
                         break;
@@ -35,7 +37,7 @@ namespace gruppprojekt2
                         break;
 
                     case 4:
-                        Console.WriteLine("Choice 3");
+                        Console.WriteLine("Choice 4");
                         menuChoice = false;
                         break;
                 }

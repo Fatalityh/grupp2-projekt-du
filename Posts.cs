@@ -13,7 +13,7 @@ namespace gruppprojekt2 {
         public void AddPostData() {
             PostsInfo postsUser = new PostsInfo(); // Creates an instance of AddToFile
 
-            Console.WriteLine("\nWrite the name of the person that is posting..."); // Name of the poster 
+            Console.WriteLine("\nWrite the name of the person that is posting"); // Name of the poster 
             string savedPosterName = Console.ReadLine();
 
             Console.WriteLine($"\nWrite the title of the post {savedPosterName}?"); // Post
@@ -38,7 +38,7 @@ namespace gruppprojekt2 {
             bool miniMenu = true;
 
             while (miniMenu == true) {
-                Console.WriteLine("Choose a sorting option, 1: Early to Late 2: Late to early");
+                Console.WriteLine("Choose sorting option, 1: Early to Late 2: Late to early");
                 int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (buttonPressed) {
