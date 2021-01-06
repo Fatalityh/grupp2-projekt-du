@@ -1,35 +1,38 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    "net5.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    "net5.0": []
   },
   "packageFolders": {
-    "/Users/hildabehnam/.nuget/packages/": {}
+    "C:\\Users\\auanj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hildabehnam/Documents/GitHub/grupp2-projekt-du/grupp2-projekt-du.csproj",
+      "projectUniqueName": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
       "projectName": "grupp2-projekt-du",
-      "projectPath": "/Users/hildabehnam/Documents/GitHub/grupp2-projekt-du/grupp2-projekt-du.csproj",
-      "packagesPath": "/Users/hildabehnam/.nuget/packages/",
-      "outputPath": "/Users/hildabehnam/Documents/GitHub/grupp2-projekt-du/obj/",
+      "projectPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\grupp2-projekt-du.csproj",
+      "packagesPath": "C:\\Users\\auanj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\auanj\\Desktop\\University\\Responsiv&OOP - Kurs 2\\OOP C#\\grupp2-projekt-du\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/hildabehnam/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\auanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {}
         }
       },
@@ -40,7 +43,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
@@ -56,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
