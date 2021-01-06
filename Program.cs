@@ -9,6 +9,7 @@ namespace gruppprojekt2
             PostsClass postsInfo = new PostsClass(); // Creates an instance of AddToFile
 
             bool menuChoice = true; 
+            int opt; 
 
             while (menuChoice)
             {
@@ -19,7 +20,13 @@ namespace gruppprojekt2
                 Console.WriteLine("4. Exit");             
                 int buttonPressed = int.Parse(Console.ReadKey().KeyChar.ToString());
 
-               
+               /* string stringinput;
+                stringinput = Console.ReadLine();
+                if (!int.TryParse(stringinput, out opt))
+                {
+                    Console.WriteLine("Invalid input, Try again");
+                    continue;
+                } */
 
                 switch (buttonPressed)
                 {

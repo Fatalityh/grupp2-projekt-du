@@ -4,7 +4,6 @@ using System.Collections.Generic;
 namespace gruppprojekt2 {
     class AddToFile {
         List<AddToFile> AddPostsToFile = new List<AddToFile>();
-
     }
 
     class PostsClass {
@@ -23,7 +22,6 @@ namespace gruppprojekt2 {
             string savedPost = Console.ReadLine();
 
             Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
-
 
             // Adds all the data into the postUser variable
             postsUser.DateOfPost = DateTime.Now;
