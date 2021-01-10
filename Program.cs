@@ -17,7 +17,7 @@ namespace gruppprojekt2 {
                 Console.WriteLine("5. Exit");
 
                 int buttonPressed;
-                while (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
+                while (!int.TryParse(Console.ReadLine(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
                     Console.WriteLine("\nIncorrect: Please choose a number between 1-5.");
                 }
 
