@@ -9,12 +9,12 @@ namespace gruppprojekt2 {
             postsInfo.Posts = postsInfo.ReadJsonFromFile(); // Adds the data from JSON file into postsInfo.posts (list)
 
             while (menuChoice) {
-                Console.WriteLine("Hello! What do you want to do today?");
+                Console.WriteLine("\nHello and Welcome to Your Diary \n------------------------------ \n What do you want to do today?");
                 Console.WriteLine("1. Create a new post");
                 Console.WriteLine("2. Show all posts");
                 Console.WriteLine("3. Search post");
                 Console.WriteLine("4. Read Posts from Json File");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Exit \n------------------------------");
 
                 int buttonPressed;
                 while (!int.TryParse(Console.ReadLine(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
@@ -25,6 +25,7 @@ namespace gruppprojekt2 {
                     case 1:
                         postsInfo.AddPostData(); // Method
                         break;
+                        
 
                     case 2:
                         postsInfo.OutputPersonData(); // Method
@@ -39,8 +40,8 @@ namespace gruppprojekt2 {
                         break;
 
                     case 5:
-                        Console.WriteLine("\nGoodbye\n"); // Exits the program
                         menuChoice = false;
+                        Console.Clear();
                         break;
                 }
             }
