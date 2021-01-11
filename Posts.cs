@@ -11,13 +11,13 @@ namespace gruppprojekt2 {
         public void AddPostData() {
             PostsInfo postsUser = new PostsInfo(); // Creates an instance of PostsInfo
 
-            Console.WriteLine("\nWrite the name of the person that is posting...");
+            Console.WriteLine("\nName:");
             string savedPosterName = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?");
+            Console.WriteLine($"\nTitle:");
             string savedPostTitle = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite your post {savedPosterName}?");
+            Console.WriteLine($"\nPost:");
             string savedPost = Console.ReadLine();
 
             Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
