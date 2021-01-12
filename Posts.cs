@@ -21,13 +21,15 @@ namespace gruppprojekt2 {
             string savedPostTitle = Console.ReadLine();
 
             Console.WriteLine($"\nPost...");
-            string savedPost;
-            string savedFirstRow = Console.ReadLine();
-            string savedSecondRow = Console.ReadLine();
-            if (savedSecondRow == "") {
-                savedPost = savedFirstRow;
-            } else {
-                savedPost = savedFirstRow + "\n" + savedSecondRow;
+            string savedPost = Console.ReadLine();
+
+            while (true) // Will run until the Console.ReadLine() has no char (empty string) and breaks the while loop
+            {
+                string extraText = Console.ReadLine();
+                if (extraText == "") {
+                    break;
+                }
+                savedPost = savedPost + "\n" + extraText;
             }
 
             Console.Clear();

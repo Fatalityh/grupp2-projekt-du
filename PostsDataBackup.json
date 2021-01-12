@@ -1,1 +1,20 @@
-[{"PosterName":"Peter","PosterTitle":"Nu kommer alla posts \u00F6vers\u00E4ttas","PosterComment":"Garanterat","DateOfPost":"2021-01-06T20:57:57.9344209+01:00"},{"PosterName":"Abdulqader","PosterTitle":"Hejsansvejsan","PosterComment":"Abo Ahmed","DateOfPost":"2021-01-06T21:33:42.9013906+01:00"},{"PosterName":"Khala Amir","PosterTitle":"mannenn walla habibi","PosterComment":"randomtextherelmao","DateOfPost":"2021-01-06T21:34:51.8410918+01:00"},{"PosterName":"DanielDecrisio","PosterTitle":"heeey boizz","PosterComment":"lolz","DateOfPost":"2021-01-06T21:45:30.9315858+01:00"},{"PosterName":"Harald","PosterTitle":"NyTitle","PosterComment":"Texthere","DateOfPost":"2021-01-11T11:00:59.6487299+01:00"},{"PosterName":"Burger King","PosterTitle":"Have it your way!","PosterComment":"Big King XL \u00E4r fan s\u00E5 j\u00E4kla g\u00F6tt olala papichulo","DateOfPost":"2021-01-12T13:55:03.0445024+01:00"},{"PosterName":"Auan","PosterTitle":"This is a test","PosterComment":"I repeat, this is a test lol","DateOfPost":"2021-01-12T13:56:14.5221844+01:00"},{"PosterName":"Thomasss","PosterTitle":"L\u00E4rare","PosterComment":"JAg \u00E4r l\u00E4rare h\u00E4r","DateOfPost":"2021-01-12T13:57:16.5605466+01:00"},{"PosterName":"Ugly Betty","PosterTitle":"Heey Boiz \u003C3","PosterComment":"Come over and lets party!","DateOfPost":"2021-01-12T14:31:57.3810091+01:00"}]
+[
+    {
+        "PosterName": "Abdulla",
+        "PosterTitle": "Hej Bloggen",
+        "PosterComment": "Tjennaaa\nJag skulle vilja testa det h\u00E4r...\nUndrar om allt kommer fungera hihi\nOkej, hejd\u00E5 bloggen!!!",
+        "DateOfPost": "2021-01-12T20:58:32.4368601+01:00"
+    },
+    {
+        "PosterName": "Peter",
+        "PosterTitle": "J\u00E4vla tjat",
+        "PosterComment": "J\u00E4vla mycket tjat om krav hit o krav dit.",
+        "DateOfPost": "2021-01-12T20:58:51.6411339+01:00"
+    },
+    {
+        "PosterName": "Harald",
+        "PosterTitle": "\u00D6l",
+        "PosterComment": "\u00D6l \u00E4r fan g\u00F6tt\nYEEAHHHHHHHHHHHHH\nBOIIII",
+        "DateOfPost": "2021-01-12T20:59:09.2681334+01:00"
+    }
+]
