@@ -11,13 +11,13 @@ namespace gruppprojekt2 {
         public void AddPostData() {
             PostsInfo postsUser = new PostsInfo(); // Creates an instance of PostsInfo
 
-            Console.WriteLine("\nWrite the name of the person that is posting...");
+            Console.WriteLine("\nAuthor/Name");
             string savedPosterName = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?");
+            Console.WriteLine($"\nTitle {savedPosterName}?");
             string savedPostTitle = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite your post {savedPosterName}?");
+            Console.WriteLine($"\nContent {savedPosterName}?");
             string savedPost = Console.ReadLine();
 
             Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
@@ -47,7 +47,7 @@ namespace gruppprojekt2 {
 
         static string ReadPostData(string path) { // Reads the data from file (method)
             string content = File.ReadAllText(path);
-            return content;
+            return content; 
         }
 
         public List<PostsInfo> ReadJsonFromFile() { // Method that is used to Deserialize from the file "PostsData.json" so that we can read the objects and use WriteLine to output each string and datetime
@@ -61,10 +61,11 @@ namespace gruppprojekt2 {
             bool miniMenu = true;
 
             while (miniMenu == true) {
-                Console.WriteLine("\nChoose a sorting option, 1: Early to Late 2: Late to early");
+                Console.WriteLine("\nYou can now sort all posts: ");
+                Console.WriteLine("\nChoose a sorting option, 1: Early to Late 2: Late to early \n----------------------------------------------------------");
 
                 int buttonPressed;
-                while (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
+                while (!int.TryParse(Console.ReadLine(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
                     Console.WriteLine("\nIncorrect: Please choose a number between 1-2.");
                 }
 
@@ -87,7 +88,7 @@ namespace gruppprojekt2 {
         }
 
         public void OutputSearchParameter() { // Used for searching through each post (not from JSON File though) Basically you can search and find results from PosterName and PosterTitle. I did not include datetime or post text cous it's not needed in my opinion
-            Console.WriteLine("\nSearch for a post:");
+            Console.WriteLine("\nSearch for a post: \n----------------------");
             string savedSearchParameter = Console.ReadLine();
             bool foundMatch = false;
 
