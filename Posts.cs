@@ -21,7 +21,14 @@ namespace gruppprojekt2 {
             string savedPostTitle = Console.ReadLine();
 
             Console.WriteLine($"\nPost...");
-            string savedPost = Console.ReadLine();
+            string savedPost;
+            string savedFirstRow = Console.ReadLine();
+            string savedSecondRow = Console.ReadLine();
+            if (savedSecondRow == "") {
+                savedPost = savedFirstRow;
+            } else {
+                savedPost = savedFirstRow + "\n" + savedSecondRow;
+            }
 
             Console.Clear();
 
