@@ -14,7 +14,7 @@ namespace gruppprojekt2 {
                 Console.WriteLine("2. Show all posts");
                 Console.WriteLine("3. Search post");
                 Console.WriteLine("4. Read Posts from Json File");
-                Console.WriteLine("5. Exit \n------------------------------");
+                Console.WriteLine("5. Exit \n------------------------------"); 
 
                 int buttonPressed;
                 while (!int.TryParse(Console.ReadLine(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute

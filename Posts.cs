@@ -47,7 +47,7 @@ namespace gruppprojekt2 {
 
         static string ReadPostData(string path) { // Reads the data from file (method)
             string content = File.ReadAllText(path);
-            return content;
+            return content; 
         }
 
         public List<PostsInfo> ReadJsonFromFile() { // Method that is used to Deserialize from the file "PostsData.json" so that we can read the objects and use WriteLine to output each string and datetime

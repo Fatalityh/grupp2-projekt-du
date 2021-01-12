@@ -7,7 +7,7 @@ namespace gruppprojekt2 {
         public string PosterName { get; set; }
         public string PosterTitle { get; set; }
         public string PosterComment { get; set; }
-        public DateTime DateOfPost { get; set; }
+        public DateTime DateOfPost { get; set; } 
 
         public override string ToString() { // Outputs everything in the "Show all posts" option in menu
             return $"{DateOfPost}\n  {PosterTitle}\n     {PosterName}\n{PosterComment}\n";
