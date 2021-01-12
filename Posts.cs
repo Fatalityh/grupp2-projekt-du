@@ -11,16 +11,21 @@ namespace gruppprojekt2 {
         public void AddPostData() {
             PostsInfo postsUser = new PostsInfo(); // Creates an instance of PostsInfo
 
-            Console.WriteLine("\nWrite the name of the person that is posting...");
+            Console.Clear();
+            Console.WriteLine("\nPost Creation:\n");
+
+            Console.WriteLine("\nName...");
             string savedPosterName = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite the title of the post {savedPosterName}?");
+            Console.WriteLine($"\nTitle...");
             string savedPostTitle = Console.ReadLine();
 
-            Console.WriteLine($"\nWrite your post {savedPosterName}?");
+            Console.WriteLine($"\nPost...");
             string savedPost = Console.ReadLine();
 
-            Console.WriteLine($"\n{savedPost} added to {savedPosterName}\nReturning to Main Menu.\n");
+            Console.Clear();
+
+            Console.WriteLine($"\nPost Added. Returning to Main Menu.\n");
 
 
             // Adds all the data into the postUser variable
@@ -60,45 +65,77 @@ namespace gruppprojekt2 {
         public void OutputPersonData() { // Used so that we can sort the Posts by early to late OR late to early by using a miniMenu
             bool miniMenu = true;
 
+            Console.Clear();
             while (miniMenu == true) {
-                Console.WriteLine("\nChoose a sorting option, 1: Early to Late 2: Late to early");
+                Console.WriteLine("\nChoose a sorting option to show Posts, 1: Early to Late 2: Late to early");
 
-                int buttonPressed;
-                while (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out buttonPressed)) { // Checks to see if input is a int, if not the code below will execute
-                    Console.WriteLine("\nIncorrect: Please choose a number between 1-2.");
-                }
+                char buttonPressed;
+                buttonPressed = Console.ReadKey(true).KeyChar;
 
                 switch (buttonPressed) {
-                    case 1:
+                    case '1':
                         Console.WriteLine("");
                         Posts.Sort((x, y) => DateTime.Compare(x.DateOfPost, y.DateOfPost)); // Early to Late, hence the x, y
                         Posts.ForEach(Console.WriteLine);
                         miniMenu = false;
                         break;
 
-                    case 2:
+                    case '2':
                         Console.WriteLine("");
                         Posts.Sort((y, x) => DateTime.Compare(x.DateOfPost, y.DateOfPost)); // Late to Early, we just flipped the x, y to y, x in the Posts.Sort()
                         Posts.ForEach(Console.WriteLine);
                         miniMenu = false;
+                        break;
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("\nIncorrect: Please choose a sorting option by clicking 1 or 2.\n");
                         break;
                 }
             }
         }
 
         public void OutputSearchParameter() { // Used for searching through each post (not from JSON File though) Basically you can search and find results from PosterName and PosterTitle. I did not include datetime or post text cous it's not needed in my opinion
+            Console.Clear();
             Console.WriteLine("\nSearch for a post:");
             string savedSearchParameter = Console.ReadLine();
             bool foundMatch = false;
 
             foreach (PostsInfo post in Posts) { // Used to find each Post in the list Posts so that when we search it goes through all the Posts until it finds a result from our input
-                if (post.PosterName.Contains(savedSearchParameter) || post.PosterTitle.Contains(savedSearchParameter)) {
+                if (post.PosterName.ToLower().Contains(savedSearchParameter.ToLower()) || post.PosterTitle.ToLower().Contains(savedSearchParameter.ToLower())) {
+                    Console.Clear();
+                    Console.WriteLine($"Found match for '{savedSearchParameter}'\n");
                     Console.WriteLine(post);
                     foundMatch = true;
                 }
             }
             if (!foundMatch) { // Checker to see if it finds the result or not, if not then we get this Writeline below.
                 Console.WriteLine($"\nInvalid, could not find a post containing {savedSearchParameter}\n");
+
+                bool miniMenu = true;
+
+                while (miniMenu == true) {
+                    Console.WriteLine("1: Search again\n2: Return to Main Menu");
+
+                    char buttonPressed;
+                    buttonPressed = Console.ReadKey(true).KeyChar;
+
+                    switch (buttonPressed) {
+                        case '1':
+                            OutputSearchParameter();
+                            break;
+
+                        case '2':
+                            Console.Clear();
+                            miniMenu = false;
+                            break;
+
+                        default:
+                            Console.Clear();
+                            Console.WriteLine("\nIncorrect: Please choose a option by clicking 1 or 2.\n");
+                            break;
+                    }
+                }
             }
         }
     }
